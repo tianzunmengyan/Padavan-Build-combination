@@ -97,7 +97,7 @@ on:
         description: 'String JSON list of plug-ins'
         required: true
         type: string
-        default: '{"ss":"y","v2ray":"n","xray":"n","trojan":"n","ssobfs":"n","smartdns":"n","vlmcsd":"n","ttyd":"n","iperf3":"n"}'
+        default: '{"ss":"n","v2ray":"n","xray":"n","trojan":"n","ssobfs":"n","smartdns":"n","vlmcsd":"n","ttyd":"n","iperf3":"n"}'
       customization:
         description: 'String JSON list of Customization'
         required: true
@@ -117,7 +117,6 @@ on:
         default: true
 env:
   FIRMWARE_AUTHOR: hanwckf
-  FIRMWARE_BRANCH: main
   FIRMWARE_REPO: padavan
   FIRMWARE_URL: https://e.coding.net/hanwckf/rt-n56u/padavan.git
   TOOLCHAIN_ROOT: toolchain/toolchain-mipsel
@@ -152,7 +151,7 @@ jobs:
           echo "Compilation_time=$(TZ='Asia/Shanghai' date +%Y%m%d)" >> $GITHUB_ENV
       - name: Download sources and toolchain
         run: |
-          git clone -b $FIRMWARE_BRANCH --depth=1 $FIRMWARE_URL $FIRMWARE_REPO
+          git clone --depth=1 $FIRMWARE_URL $FIRMWARE_REPO
           mkdir -p $FIRMWARE_REPO/$TOOLCHAIN_ROOT
           curl -fSsLo- $TOOLCHAIN_URL/${{ matrix.toolchaingcc }}.tar.xz | tar Jxv -C $FIRMWARE_REPO/$TOOLCHAIN_ROOT
       - name: Parse the string JSON list
