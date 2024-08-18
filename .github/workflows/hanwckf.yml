@@ -8,7 +8,7 @@ on:
         description: 'target to compile'
         options:
         - K1
-        - K2
+        - PSG1218
         - Oyewifi_OYE-0001
         - Lenovo_NEWIFI-MINI
         - Xiaomi_MINI
@@ -34,7 +34,6 @@ on:
         - Gee_B70
         - Totolink_A3004NS
         - K2P
-        - K2P-USB
         - JCG_836PRO
         - JCG_AC860M
         - DLINK_DIR-882
@@ -78,7 +77,7 @@ jobs:
             "K1": {
               "model": "PSG1208"
             },
-            "K2": {
+            "PSG1218": {
               "model": "PSG1218"
             },
             "Oyewifi_OYE-0001": {
@@ -155,9 +154,6 @@ jobs:
             },
             "K2P": {
               "model": "K2P"
-            },
-            "K2P-USB": {
-              "model": "K2P-USB"
             },
             "JCG_836PRO": {
               "model": "JCG-836PRO"
