@@ -208,7 +208,7 @@ jobs:
             }
           }
         export_to: env
-        mode: case_insensitive
+        mode: overwrite
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
