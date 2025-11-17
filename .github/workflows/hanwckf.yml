@@ -78,7 +78,7 @@ jobs:
               "model": "PSG1208"
             },
             "PSG1218": {
-              "model": "PSG1218"
+              "model": "PSG1218_nano"
             },
             "Oyewifi_OYE-0001": {
               "model": "OYE-001"
@@ -153,7 +153,7 @@ jobs:
               "model": "A3004NS"
             },
             "K2P": {
-              "model": "K2P"
+              "model": "K2P_nano"
             },
             "JCG_836PRO": {
               "model": "JCG-836PRO"
